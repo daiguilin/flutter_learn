@@ -1,0 +1,21 @@
+import 'package:dio/dio.dart';
+import 'http_config.dart';
+
+class HttpRequest {
+  static BaseOptions baseOptions = BaseOptions(connectTimeout: timeout);
+  static Dio dio = Dio(baseOptions);
+
+  static Future<T> request<T>(String url,{String methond = "get",Map<String,dynamic> params}) async {
+    //单独相关的设置
+    Options options = Options();
+    options.method = methond;
+
+    //2.发送网络请求
+    try{
+      Response response = await dio.request<T>(url,queryParameters:params,options: options);
+      return response.data;
+    } on DioError catch(e){
+      throw e;
+    }
+  }
+}
