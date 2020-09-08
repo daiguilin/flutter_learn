@@ -32,8 +32,8 @@ class _AppState extends State<App> {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
       currentIndex: _currentIndex,
-      selectedFontSize: 14,
-      unselectedFontSize: 14,
+//      selectedFontSize: 14,
+//      unselectedFontSize: 14,
       type: BottomNavigationBarType.fixed,
       items: [
         createItem("home", "首页"),
