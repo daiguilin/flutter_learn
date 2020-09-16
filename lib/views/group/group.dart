@@ -3,7 +3,9 @@ class Group extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Group"),
+      child: Padding(
+        child: Text("Group"),
+      ),
     );
   }
 }
